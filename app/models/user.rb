@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   belongs_to :agence
   has_many :proprietaires
   has_many :acquereurs
+  has_many :biens
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
