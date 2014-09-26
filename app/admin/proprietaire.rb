@@ -1,4 +1,5 @@
 ActiveAdmin.register Proprietaire do
+  permit_params :nom
 
 
   # See permitted parameters documentation:
