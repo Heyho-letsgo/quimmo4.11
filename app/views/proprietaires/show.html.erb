@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Agence:</strong>
+  <%= @proprietaire.agence %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @proprietaire.user %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @proprietaire.nom %>
+</p>
+
+<%= link_to 'Edit', edit_proprietaire_path(@proprietaire) %> |
+<%= link_to 'Back', proprietaires_path %>

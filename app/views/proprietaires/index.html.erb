@@ -1,0 +1,29 @@
+<h1>Listing proprietaires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agence</th>
+      <th>User</th>
+      <th>Nom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proprietaires.each do |proprietaire| %>
+      <tr>
+        <td><%= proprietaire.agence %></td>
+        <td><%= proprietaire.user %></td>
+        <td><%= proprietaire.nom %></td>
+        <td><%= link_to 'Show', proprietaire %></td>
+        <td><%= link_to 'Edit', edit_proprietaire_path(proprietaire) %></td>
+        <td><%= link_to 'Destroy', proprietaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proprietaire', new_proprietaire_path %>
