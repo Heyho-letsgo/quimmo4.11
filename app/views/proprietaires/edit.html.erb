@@ -1,6 +1,5 @@
-<h1>Editing proprietaire</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @proprietaire %> |
-<%= link_to 'Back', proprietaires_path %>
+<%- model_class = Proprietaire -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Proprietaire %></h1>
+</div>
+<%= render :partial => 'form' %>
