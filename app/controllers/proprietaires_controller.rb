@@ -29,6 +29,7 @@ class ProprietairesController < ApplicationController
   # POST /proprietaires.json
   def create
     @proprietaire = Proprietaire.new(proprietaire_params)
+    @proprietaire.user = current_user
 
     respond_to do |format|
       if @proprietaire.save
