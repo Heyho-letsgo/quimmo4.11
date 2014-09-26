@@ -29,6 +29,7 @@ class AcquereursController < ApplicationController
   # POST /acquereurs.json
   def create
     @acquereur = Acquereur.new(acquereur_params)
+    @acquereur.user = current_user
 
     respond_to do |format|
       if @acquereur.save
