@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :agences
+
   resources :acquereurs
 
   resources :proprietaires
